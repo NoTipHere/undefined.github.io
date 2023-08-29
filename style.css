@@ -1,0 +1,323 @@
+/* Reset de la mise en page de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Style effrayant pour le header et le footer */
+#header,
+#footer {
+    padding: 20px;
+    color: #fff;
+    background-color: #000; /* Fond noir */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Ombre rouge pour un effet effrayant */
+    transition: background-color 0.5s ease-in-out; /* Animation de transition */
+}
+
+/* Style effrayant pour le footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+@keyframes lightning {
+    0% {
+        background-color: #000;
+    }
+    10% {
+        background-color: rgb(166, 0, 0); /* Rouge pendant le clignotement */
+    }
+    20% {
+        background-color: #6D1A1A;
+    }
+    30% {
+        background-color: rgb(166, 0, 0); /* Rouge pendant le clignotement */
+    }
+    100% {
+        background-color: #000;
+    }
+}
+
+.lightning-animation {
+    animation: lightning 2s ease-in-out;
+}
+
+#imageContainer,
+#imageContainerBis {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+#imageContainer {
+    bottom: 50%;
+}
+
+#imageContainerBis:hover,
+#imageContainer:hover {
+    opacity: 1;
+}
+
+/* Utilisez Flexbox pour aligner le contenu du header horizontalement */
+#headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour l'image */
+#imgShow {
+    max-width: 100px; /* Ajustez la largeur de l'image selon vos besoins */
+    height:auto;
+}
+
+/* Styles pour le conteneur de texte */
+#textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Styles pour le texte */
+#matrixText {
+    color: #000000; /* Couleur du texte (vert dans cet exemple) */
+    font-size: 32px;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden;
+    border-right: 2px solid #000000; /* Curseur clignotant */
+    animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Animation pour l'effet d'écriture */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation pour le curseur clignotant */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #000000;
+    }
+}
+
+/* Style effrayant pour .popup-container */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir avec transparence */
+    z-index: 1;
+}
+
+/* Style effrayant pour .popup */
+.popup {
+    background-color: #000; /* Noir pour le fond */
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Petit halo rouge autour du popup */
+    text-align: left; /* Aligner le texte à gauche */
+    color: #fff; /* Texte en blanc */
+}
+
+/* Style effrayant pour .button-container */
+.button-container {
+    text-align: right; /* Aligner le texte à droite */
+    margin-top: 20px; /* Espace supplémentaire au-dessus du bouton */
+}
+
+/* Style effrayant pour le bouton */
+button {
+    background-color: #000000; /* Rouge pour le bouton */
+    color: #fff; /* Texte en blanc */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* footer text */
+#eyeGuideContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#guideText {
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+#eyeGuideContainer:hover #guideText {
+    color: rgb(255, 56, 56); /* Changez la couleur au passage de la souris */
+}
+
+/* eye image */
+.eye-image {
+    position: absolute;
+    width: 36px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* Style du nouveau popup effrayant */
+#customPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Ombre rouge pour un effet effrayant */
+    z-index: 1000;
+}
+
+/* Style du texte du nouveau popup effrayant */
+#customPopup p {
+    font-size: 18px;
+}
+
+/* Style du bouton "Fermer" */
+#closePopup {
+    background-color: #ff0000; /* Fond rouge pour le bouton */
+    color: #fff; /* Texte blanc pour le bouton */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Style du fond semi-transparent derrière le nouveau popup effrayant */
+.popup-overlay-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+}
+
+/* Styles effrayants pour les titres */
+.title {
+    color: #000; /* Noir */
+    text-shadow: 2px 2px 4px #ff0000; /* Halo rouge */
+    font-size: 24px; /* Taille de police */
+    margin-bottom: 10px; /* Marge en bas */
+}
+
+/* Style effrayant pour les dates */
+.date {
+    color: #fff; /* Blanc */
+    background-color: #000; /* Noir pour le fond */
+    padding: 5px 10px; /* Marge intérieure pour le texte */
+    font-size: 14px; /* Taille de police */
+    display: inline-block;
+}
+
+/* Style pour les paragraphes */
+.intro,
+.content {
+    color: #000; /* Noir */
+    background-color: transparent; /* Fond transparent */
+    padding: 10px; /* Marge intérieure pour le texte */
+    border: none; /* Pas de bordure */
+    font-size: 16px; /* Taille de police */
+    margin-top: 10px; /* Marge en haut */
+}
+
+/* Style pour les titres */
+.section-title,
+.sub-title {
+    color: #000; /* Noir */
+    text-shadow: 2px 2px 4px #ff0000; /* Halo rouge */
+    font-size: 20px; /* Taille de police */
+    margin-top: 20px; /* Marge en haut */
+}
+
+/* Style pour les éléments de liste */
+.list {
+    color: #000; /* Noir */
+    list-style-type: square; /* Style de la puce */
+    margin-left: 20px; /* Marge à gauche pour les listes */
+}
+
+/* Style pour les éléments de liste */
+.list-item {
+    margin-top: 10px; /* Marge en haut pour chaque élément de liste */
+}
+
+/* Style pour les liens */
+.list-content a {
+    color: #ff0000; /* Rouge pour les liens */
+    text-decoration: none; /* Pas de soulignement */
+    transition: color 0.3s ease-in-out; /* Animation de transition pour la couleur */
+}
+
+/* Animation de changement de couleur au survol des liens */
+.list-content a:hover {
+    color: #000; /* Noir au survol */
+}
