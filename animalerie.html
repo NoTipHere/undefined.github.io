@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ứ̸̤̺̟̜͛̃̎͂̂̈́͘͝ǹ̵̡̛̰͇̓̂̒̀̀̿̐̇́̇͘͝d̴͓̫̟̻̀ę̶̫̜̜̪̪̤͙̯̭͇̩̪̟͂̀̆͒͒͊̆̋̕͝͝͝f̷̧͚̙͇͒̾͑̈́̑̀i̷̢̛̛͓̎̉̿̄͆͊̓̓͘͝͠n̷̨̨̦͚̟̯̮̟̳̄̓̂͆͑̎̇̂̄̕͜͜ͅe̴̪̙͆ͅd̴̢̨̡̩̰͈̳̺͓̖͗̀͐͒̂̑͊̒̌͝</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('chemin/vers/votre/image-de-fond.jpg');
+            background-size: 100% 100%; /* Étire l'image pour remplir tout l'écran sans rognage */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .content {
+            /* Styles pour le contenu principal de la page */
+            padding-bottom: 20px; /* Ajoute de l'espace en bas pour ne pas masquer le contenu sous le footer */
+        }
+        .duck-image {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            width: 500px; /* Ajustez la largeur selon vos besoins */
+            height: 500px; /* Ajustez la hauteur selon vos besoins */
+            background-image: url('duck.png');
+            background-size: contain; /* Ajustez cette propriété selon vos besoins */
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 1; /* Assurez-vous que l'image "duck" est au-dessus du contenu */
+        }
+        .duck-image:hover {
+            background-image: url('cursed-duck.png');
+        }
+        .snail-image {
+            position: fixed;
+            bottom: 0px;
+            left: 200px;
+            width: 400px; /* Ajustez la largeur selon vos besoins */
+            height: 200px; /* Ajustez la hauteur selon vos besoins */
+            background-image: url('snail.png');
+            background-size: contain; /* Ajustez cette propriété selon vos besoins */
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 1; /* Assurez-vous que la nouvelle image est au-dessus du contenu */
+        }
+        .snail-image:hover {
+            background-image: url('cursed-snail.png');
+        }
+        .hibou-image {
+            width: 520px; /* Ajustez la largeur selon vos besoins */
+            height: 260px; /* Ajustez la hauteur selon vos besoins */
+            background-image: url('hibou.png');
+            background-size: contain; /* Ajustez cette propriété selon vos besoins */
+            background-repeat: no-repeat;
+            cursor: pointer;
+            position: fixed;
+            top: 200px;
+            left: 50px;
+            z-index: 1; /* Assurez-vous que l'image en haut à gauche est au-dessus du contenu */
+        }
+        .hibou-image:hover {
+            background-image: url('cursed-hibou.png');
+        }
+    </style>
+</head>
+<body style="background-image: url('backrooms.jpg');">
+    <header id="header">
+        <div id="headerContent">
+            <a href="#" id="cguLink">
+                <img id="imgShow" src="undefined.png" alt="n̸̢̥͍͉͂̉̓̑͂͒̇̈́̅̎̐͛̊͆̋̍̕̕̚͝o̵̧̲͕͖̦͍͖̅́̒̋́̍͆̐̑̈́́́̄͆̿̃̋͗̅̈́͒̾̚͝t̵̟͍̳̮̮̯̦̏̐̽͌͐̾͆̑̋͑͛̒̉̃̅̕̚͜͝͝h̸̺̼̪̗̘̰̻̰̙͙͇͋̌̒͋̏͌̌͋̋͌͌̚͝ï̴̼̖̰̖̫̜̯͍̹̔̐̂͋̾̋͐̀̓̊͝ǹ̸̡̖̺̬͇̥͖͈͓̠̰̳͈͖̟͎̩̥̙́͊͗̐̓͋̓̓̈́̅͛̾̒̚͝͝͝ģ̵̛̰͈͙̼̘̼̭̙̜͈̜̬̲̺͈̥̦̥̀̌͐̊͂͒̈́̃͆͌̈́͑̈͗̐̀͗̅̔͜͠͝ͅ ̷̡̢̖̳̦̫̬͔̀̃̐̓͘t̴͍̯̘̝̖͈̺̠͚̟̝̝̣́̋̍͂͐̓͒̍̍͑̚͝͝ơ̸̱͙̘̞̜̮̮̠͈̤͉̙̿́͗̃͊̈͐̂̓͊̓͠͝ ̷̛̲͚͍͖̬̜̜̌̀̃̃͛͒̌̈́̿͛͒͑̉͘̕s̷̢̢̨̛͍͍̩̫͇͓̪̹̮͙͈̬̩̻̮͓̜͓̖̦̤̾̔͊͋̿͂̈́̒̎̍̌̕ě̸̢̧͚̪̳̝̗̪͇͓̰̬͔̺̋̒̅͛̉̏͒̿͒͌͒͛̈̑̕͜͜͝͝͝ͅé̸̡̛͖̪̞͉͈͔̞̰͎̣̂̿̔̓̀̿̎͘͝">
+            </a>
+        </div>
+        <nav>
+            <ul class="list">
+                <li class="list-item"><a href="index.html">Accueil</a></li>
+                <li><a href="animalerie.html">Animalerie</a></li>
+                <li class="list-item"><a href="bonus.html">Bonus</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+        </div>
+        <div class="duck-image"></div>
+        <div class="snail-image"></div>
+        <div class="hibou-image"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
